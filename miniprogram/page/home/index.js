@@ -312,7 +312,7 @@ CustomPage({
     wx.openLocation({
       latitude: this.data.latitude,
       longitude: this.data.longitude,
-      name: '尚小镜 - 总店',
+      name: '尚小镜',
       address: this.data.address,
       scale: 16
     });
