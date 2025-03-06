@@ -1,0 +1,81 @@
+<!-- pages/linkservice/index.wxml -->
+<view class="link-container">
+  <!-- 顶部banner -->
+  <view class="banner">
+    <image src="./images/linkservice_1.jpeg" mode="aspectFill"></image>
+  </view>
+
+  <!-- 联系方式列表 -->
+  <view class="contact-list">
+    <!-- 电话咨询 -->
+    <view class="contact-item" bindtap="makePhoneCall" data-phone="{{contactInfo.phone}}">
+      <view class="item-left">
+        <image src="./images/callphone.jpg"></image>
+        <view class="item-info">
+          <text class="title">电话咨询</text>
+          <text class="desc">{{contactInfo.phone}}</text>
+        </view>
+      </view>
+      <image class="arrow" src="./images/arrowright.jpg"></image>
+    </view>
+
+    <!-- 在线客服 -->
+    <view class="contact-item" open-type="contact">
+      <view class="item-left">
+        <image src="./images/custmerservice.jpeg"></image>
+        <view class="item-info">
+          <text class="title">在线客服</text>
+          <text class="desc">工作时间: 8:00-21:00</text>
+        </view>
+      </view>
+      <image class="arrow" src="./images/arrowright.jpg"></image>
+    </view>
+
+    <!-- 门诊地址 -->
+    <view class="contact-item" bindtap="openLocation">
+      <view class="item-left">
+        <image src="./images/location.jpg"></image>
+        <view class="item-info">
+          <text class="title">门诊地址</text>
+          <text class="desc">{{contactInfo.address}}</text>
+        </view>
+      </view>
+      <image class="arrow" src="./images/arrowright.jpg"></image>
+    </view>
+  </view>
+
+  <!-- 地图 -->
+  <view class="map-section">
+    <map 
+      id="map"
+      latitude="{{contactInfo.latitude}}"
+      longitude="{{contactInfo.longitude}}"
+      markers="{{markers}}"
+      scale="16"
+      show-location
+    ></map>
+  </view>
+
+  <!-- 营业时间 -->
+  <view class="business-hours">
+    <view class="section-title">营业时间</view>
+    <view class="hours-list">
+      <view class="hours-item" wx:for="{{businessHours}}" wx:key="day">
+        <text class="day">{{item.day}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="bottom-buttons">
+    <button class="nav-btn" bindtap="openLocation">
+      <image src="./images/nav.png"></image>
+      <text>导航</text>
+    </button>
+    <button class="call-btn" bindtap="makePhoneCall" data-phone="{{contactInfo.phone}}">
+      <image src="./images/links.png"></image>
+      <text>电话咨询</text>
+    </button>
+  </view>
+</view>

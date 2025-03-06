@@ -1,0 +1,38 @@
+<view class="exgoods-container">
+  <!-- 商品轮播图 -->
+  <swiper class="service-swiper" indicator-dots circular>
+    <swiper-item wx:for="{{serviceInfo.images}}" wx:key="*this">
+      <image src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 商品基本信息 -->
+  <view class="service-info">
+    <view class="price-section">
+      <text class="price">¥{{serviceInfo.price}}</text>
+      <text class="original-price">¥{{serviceInfo.originalPrice}}</text>
+      <view class="sold">已售 {{serviceInfo.soldCount}}</view>
+    </view>
+    <view class="title">{{serviceInfo.name}}</view>
+    <view class="desc">{{serviceInfo.description}}</view>
+    <view class="tags">
+      <text wx:for="{{serviceInfo.tags}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 选择规格 -->
+  <view class="spec-section">
+    <view class="section-title">选择规格</view>
+    <view class="spec-list">
+      <view class="spec-item {{item.selected ? 'selected' : ''}}" 
+            wx:for="{{serviceInfo.specifications}}" 
+            wx:key="id"
+            bindtap="selectSpec" 
+            data-id="{{item.id}}">
+        <text>{{item.name}}</text>
+        <text class="spec-price">¥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+  
+</view>

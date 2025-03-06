@@ -1,0 +1,112 @@
+<!--page/productdetail/index.wxml-->
+
+<view class="product-container">
+  <!-- 商品轮播图 -->
+  <swiper class="service-swiper" indicator-dots circular>
+    <swiper-item wx:for="{{serviceInfo.images}}" wx:key="*this">
+      <image src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 商品基本信息 -->
+  <view class="service-info">
+    <view class="price-section">
+      <text class="price">¥{{serviceInfo.price}}</text>
+      <text class="original-price">¥{{serviceInfo.originalPrice}}</text>
+      <view class="sold">已售 {{serviceInfo.soldCount}}</view>
+    </view>
+    <view class="title">{{serviceInfo.name}}</view>
+    <view class="desc">{{serviceInfo.description}}</view>
+    <view class="tags">
+      <text wx:for="{{serviceInfo.tags}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 选择规格 -->
+  <view class="spec-section">
+    <view class="section-title">选择规格</view>
+    <view class="spec-list">
+      <view class="spec-item {{item.selected ? 'selected' : ''}}" 
+            wx:for="{{serviceInfo.specifications}}" 
+            wx:key="id"
+            bindtap="selectSpec" 
+            data-id="{{item.id}}">
+        <text>{{item.name}}</text>
+        <text class="spec-price">¥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 医生团队 -->
+  <view class="doctor-section">
+    <view class="section-title">医生团队</view>
+    <scroll-view class="doctor-scroll" scroll-x>
+      <view class="doctor-item" 
+            wx:for="{{serviceInfo.doctors}}" 
+            wx:key="id"
+            bindtap="navigateToDoctor" 
+            data-id="{{item.id}}">
+        <image src="{{item.avatar}}" mode="aspectFill"></image>
+        <text class="doctor-name">{{item.name}}</text>
+        <text class="doctor-title">{{item.title}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 服务详情 -->
+  <view class="detail-section">
+    <view class="section-title">服务详情</view>
+    <view class="detail-content">
+      <rich-text nodes="{{serviceInfo.detailContent}}"></rich-text>
+    </view>
+  </view>
+
+  <!-- 用户评价 -->
+  <view class="review-section">
+    <view class="section-header">
+      <view class="section-title">用户评价</view>
+      <view class="review-stats">
+        <text class="rating">{{serviceInfo.rating}}分</text>
+        <text class="review-count">{{serviceInfo.reviewCount}}条评价</text>
+      </view>
+    </view>
+    <view class="review-list">
+      <view class="review-item" wx:for="{{serviceInfo.reviews}}" wx:key="id">
+        <image class="user-avatar" src="{{item.userAvatar}}" mode="aspectFill"></image>
+        <view class="review-content">
+          <view class="review-header">
+            <text class="user-name">{{item.userName}}</text>
+            <text class="review-time">{{item.time}}</text>
+          </view>
+          <view class="rating-stars">
+            <image wx:for="{{item.rating}}" wx:key="*this" src="/assets/icons/star-active.png"></image>
+          </view>
+          <text class="review-text">{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="bottom-bar">
+    <view class="left-btns">
+      <view class="icon-btn" bindtap="toggleFavorite">
+        <image src="{{isFavorite ? '/assets/icons/heart-active.png' : '/assets/icons/heart.png'}}"></image>
+        <text>收藏</text>
+      </view>
+      <view class="icon-btn" bindtap="contactService">
+        <image src="/assets/icons/service.png"></image>
+        <text>客服</text>
+      </view>
+      <view class="icon-btn" bindtap="navigateToCart">
+        <image src="/assets/icons/cart.png"></image>
+        <text>购物车</text>
+        <view class="cart-badge" wx:if="{{cartCount > 0}}">{{cartCount}}</view>
+      </view>
+    </view>
+    <view class="right-btns">
+      <button class="add-cart-btn" bindtap="addToCart">加入购物车</button>
+      <button class="buy-btn" bindtap="buyNow">立即购买</button>
+    </view>
+  </view>
+</view> 

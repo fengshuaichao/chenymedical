@@ -1,0 +1,278 @@
+@import "../common/common.wxss";
+
+.credits-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 30rpx;
+}
+
+/* 积分卡片样式 */
+.points-card {
+  background: linear-gradient(135deg, #2B7FE1, #1E5BB0);
+  border-radius: 20rpx;
+  padding: 40rpx;
+  color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.points-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.tab-header {
+  display: flex;
+  margin: 30rpx 0;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 32rpx;
+  color: #666;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tab-item.active {
+  color: #007AFF;
+  font-weight: 500;
+}
+
+.tab-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120rpx;
+  height: 6rpx;
+  background: #007AFF;
+  border-radius: 4rpx;
+}
+/* 增加点击反馈效果 */
+.tab-item:active {
+  background-color: rgba(0,122,255,0.1);
+}
+.points-rules {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  opacity: 0.9;
+}
+
+.points-rules image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 8rpx;
+}
+
+.points-info {
+  text-align: center;
+}
+
+.points-number {
+  font-size: 72rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.points-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-btn image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-bottom: 12rpx;
+}
+
+.action-btn text {
+  font-size: 26rpx;
+}
+
+/* 精选商品和我可兑换并排展示 */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  background-color: #f0f0f0; /* 默认背景色 */
+  text-align: center;
+  flex: 1;
+  margin-right: 20rpx;
+}
+
+.section-title.selected {
+  background-color: #2B7FE1; /* 精选商品背景色 */
+  color: #fff;
+}
+
+.section-title.exchange {
+  background-color: #FF4D4F; /* 我可兑换背景色 */
+  color: #fff;
+  margin-right: 0;
+}
+
+.hover-effect {
+  opacity: 0.8; /* 点击态效果 */
+}
+
+.recommend-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.recommend-item {
+  width: calc(50% - 10rpx);
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.recommend-item image {
+  width: 100%;
+  height: auto;
+}
+
+.recommend-info {
+  padding: 10rpx;
+  background-color: #fff;
+}
+
+.recommend-name {
+  font-size: 24rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.recommend-price {
+  font-size: 28rpx;
+  color: #FF4D4F;
+  font-weight: bold;
+}
+
+.exchange-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.exchange-item {
+  width: calc(50% - 10rpx);
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.exchange-item image {
+  width: 100%;
+  height: auto;
+}
+
+.exchange-info {
+  padding: 10rpx;
+  background-color: #fff;
+}
+
+.exchange-name {
+  font-size: 24rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.exchange-price {
+  font-size: 28rpx;
+  color: #FF4D4F;
+  font-weight: bold;
+}
+
+/* 规则弹窗样式 */
+.rules-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules-content {
+  width: 80%;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+}
+
+.rules-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.rules-header text {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.rules-header image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.rules-list {
+  max-height: 60vh;
+}
+
+.rule-item {
+  margin-bottom: 20rpx;
+}
+
+.rule-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.rule-desc {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.6;
+}

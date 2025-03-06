@@ -1,0 +1,8 @@
+<!--page/membersprofile/index.wxml-->
+<view class="membersprofile-container">
+  <view class="membersprofie-image">
+    <image src="images/membersprofile.jpg" mode="widthFix"></image>
+  </view>
+</view>
+  
+

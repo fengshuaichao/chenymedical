@@ -1,0 +1,6 @@
+<!-- pages/doctor/index.wxml -->
+<view class="doctor-container">
+  <view class="doctor-banner-image">
+    <image src="./images/doctor.jpg"/>
+  </view>
+</view>

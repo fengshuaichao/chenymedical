@@ -1,0 +1,8 @@
+<!--<view class="page" data-weui-theme="{{theme}}"></view>-->
+
+<view class="recommend-container">
+ 
+  <view class="recommend-image">
+    <image src="images/recommend.jpg"></image>
+  </view>
+</view>

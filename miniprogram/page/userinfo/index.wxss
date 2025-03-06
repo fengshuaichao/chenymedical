@@ -1,0 +1,109 @@
+.userinfo-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 40rpx;
+}
+
+.user-info {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-id {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.user-id text {
+  display: block;
+}
+
+.phone {
+  margin-left: 20rpx;
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20rpx;
+}
+
+.action-btn {
+  color: #ff6634;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100rpx 0;
+}
+
+.empty-icon {
+  width: 240rpx;
+  height: 240rpx;
+  margin-bottom: 40rpx;
+}
+
+.empty-text {
+  color: #666;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.bottom-buttons {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30rpx;
+  background: #fff;
+}
+
+.btn {
+  width: 50%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  display: inline;
+  margin: 0rpx auto 20rpx;
+}
+
+.bind-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.create-btn {
+  background: #ff6634;
+  color: #fff;
+}
+
+.btn-desc {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24rpx;
+  color: #999;
+} 
+
+
+.bottom-buttons-other {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30rpx;
+  background: #fff;
+  display: flex;
+}
+

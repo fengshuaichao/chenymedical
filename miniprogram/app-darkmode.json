@@ -1,0 +1,45 @@
+{
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#191919",
+    "backgroundColor": "#191919"
+  },
+  "tabBar": {
+    "color": "#FCFCFC",
+    "selectedColor": "#10a2b6", 
+    "borderStyle": "white",
+    "backgroundColor": "#191919",
+    "list": [
+      {
+        "pagePath": "page/home/index",
+        "iconPath": "image/tabicon/index.png",
+        "selectedIconPath": "image/tabicon/index_selected.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "page/mallshop/index",
+        "iconPath": "image/tabicon/mall.png",
+        "selectedIconPath": "image/tabicon/mall_selected.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "page/credits/index",
+        "iconPath": "image/tabicon/credits.png",
+        "selectedIconPath": "image/tabicon/credits_selected.png",
+        "text": "积分"
+      },
+      {
+        "pagePath": "page/cart/index",
+        "iconPath": "image/tabicon/cart.png",
+        "selectedIconPath": "image/tabicon/cart_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "page/cloud/index",
+        "iconPath": "image/tabicon/usercenter.png",
+        "selectedIconPath": "image/tabicon/usercenter_selected.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+<!-- pages/team/index.wxml -->
+<view class="team-container">
+  <view class="team-banner-image">
+    <image src="./images/team_1.jpg"/>
+  </view>
+</view>

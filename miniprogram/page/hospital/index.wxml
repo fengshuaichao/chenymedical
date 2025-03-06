@@ -1,0 +1,63 @@
+<view class="page" data-weui-theme="{{theme}}">
+
+  <!-- 搜索框部分 -->
+  <view class="search-container">
+    <view class="search-box">
+      <icon type="search" size="16" color="#999"/>
+      <input 
+        class="search-input" 
+        placeholder="搜索诊疗项目" 
+        placeholder-class="placeholder"
+        value="{{searchKeyword}}"
+        bindinput="onSearchInput"
+        bindconfirm="onSearch"
+      />
+      <view class="search-clear" wx:if="{{searchKeyword}}" bindtap="clearSearch">
+        <icon type="clear" size="14" color="#999"/>
+      </view>
+    </view>
+  </view>
+
+  <!-- 横向导航 -->
+  <view class="quick-menu">
+    <view class="menu-item" bindtap="navigateTo" data-url="/pages/member-benefits/index">
+      <text>会员权益</text>
+    </view>
+    <view class="menu-item" bindtap="navigateTo" data-url="/pages/points-exchange/index">
+      <text>积分兑换</text>
+    </view>
+    <view class="menu-item" bindtap="navigateTo" data-url="/pages/hospital-intro/index">
+      <text>医院简介</text>
+    </view>
+    <view class="menu-item" bindtap="navigateTo" data-url="/pages/referral/index">
+      <text>推荐有礼</text>
+    </view>
+  </view>
+
+  <!-- 推荐图 -->
+  <view class="recommend">
+    <image class="index-logo" src="./images/home_common.jpg"></image>
+  </view>
+
+  <!-- 轮播图 -->
+  <swiper class="banner" indicator-dots autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image src="{{item.imageUrl}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+
+
+
+
+  <view class="grid-list">
+    <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+      <image src="{{item.icon}}" mode="widthFix"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="links">
+    <image class="links-img" src="./images/links.jpg"></image>
+  </view>
+   
+</view>

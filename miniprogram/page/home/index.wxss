@@ -1,0 +1,530 @@
+/*!
+ * WeUI v2.3.0 (https://github.com/weui/weui-wxss)
+ * Copyright 2020 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+ @import "../common/common.wxss";
+.weui-agree__link {
+  display: inline;
+  color: var(--weui-LINK);
+}
+
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center
+}
+
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: .3s;
+  transition: .3s
+}
+
+.weui-cells:after,
+.weui-cells:before {
+  display: none
+}
+
+.weui-cells_show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
+
+.weui-cell:before {
+  right: 15px
+}
+
+.kind-list__item {
+  margin: 10px 0;
+  background-color: var(--weui-BG-2);
+  border-radius: 2px;
+  overflow: hidden
+}
+
+.kind-list__item:first-child {
+  margin-top: 0
+}
+
+.kind-list__img {
+  width: 30px;
+  height: 30px
+}
+
+[data-weui-theme=dark] .kind-list__img {
+  -webkit-filter: invert(100) hue-rotate(180deg);
+  filter: invert(100) hue-rotate(180deg)
+}
+
+.kind-list__item-hd {
+  padding: 20px;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s
+}
+
+.kind-list__item-hd_show {
+  opacity: .4
+}
+
+.kind-list__item-bd {
+  height: 0;
+  overflow: hidden
+}
+
+.kind-list__item-bd_show {
+  height: auto
+}
+
+.index-hd {
+  padding: 40px 40px 20px;
+  text-align: center;
+}
+
+.index-bd {
+  padding: 0 15px 20px;
+}
+
+.index-ft {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.index-logo {
+  /* width: 43px;
+  height: 43px; */
+  width: 43px;
+  height: 43px;
+}
+
+.index-desc {
+  margin-top: 10px;
+  color: #888888;
+  /* font-size: 14px; */
+  font-size: 14px;
+}
+
+.search-container {
+  padding: 24rpx 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 32rpx;
+  padding: 12rpx 24rpx;
+}
+
+.search-input {
+  flex: 1;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  color: #333;
+}
+
+.placeholder {
+  color: #999;
+}
+
+.search-clear {
+  padding: 10rpx;
+}
+
+.quick-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.menu-item text {
+  font-size: 26rpx;
+  color: #333;
+} 
+
+.recommend {
+  height: 400rpx;
+  width: 100%;
+}
+
+.recommend image {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  height: 400rpx;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10rpx;
+  margin: 20rpx;
+}
+
+.grid-item {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.grid-item image {
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin: 10rpx auto;
+}
+
+.grid-item text {
+  line-height: 35rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.active {
+  background-color: #2979ff;
+  color: white;
+}
+
+
+
+.links {
+  height: 400rpx;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.links image {
+  width: 100%;
+  height: 100%;
+}
+
+
+.gridBox {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.gridBox image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.gridBox text:last-child {
+  color: rgb(29,212,156);
+}
+
+
+
+.call-bubble {
+  position: fixed;
+  right: 30rpx;
+  bottom: 160rpx;
+  z-index: 100;
+}
+
+.bubble-content {
+  background: #2B7FE1;
+  border-radius: 40rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 16rpx rgba(43, 127, 225, 0.3);
+}
+
+.bubble-content image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+
+.bubble-content text {
+  color: #fff;
+  font-size: 28rpx;
+}
+
+/* 鎷ㄦ墦鐢佃瘽寮圭獥鏍峰紡 */
+.call-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.call-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 24rpx 24rpx 0 0;
+  padding: 40rpx 30rpx;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.call-modal.show .modal-content {
+  transform: translateY(0);
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.phone-list {
+  margin-bottom: 40rpx;
+}
+
+.phone-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  background: #F5F5F5;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+}
+
+.phone-label {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.phone-number {
+  font-size: 32rpx;
+  color: #2B7FE1;
+  font-weight: bold;
+}
+
+.phone-item image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.modal-close {
+  text-align: center;
+  font-size: 32rpx;
+  color: #999;
+  padding: 20rpx 0;
+} 
+
+
+
+
+/* 地图部分样式 */
+.map-section {
+  margin: 24rpx 0;
+  padding: 0 24rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16rpx;
+  padding-left: 16rpx;
+  border-left: 8rpx solid #07c160;
+}
+
+.map-container {
+  background: #fff;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.map {
+  width: 100%;
+  height: 360rpx;
+}
+
+.store-info {
+  padding: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #eee;
+}
+
+.info-left {
+  flex: 1;
+  padding-right: 24rpx;
+}
+
+.store-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.store-address {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.navigate-btn {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 24rpx;
+  background: #07c160;
+  color: #fff;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+}
+
+.navigate-btn t-icon {
+  margin-right: 8rpx;
+}
+
+
+
+/* 医生轮播样式 */
+.doctors-swiper {
+  margin-top: 100rpx;
+  height: 800rpx;
+}
+
+.doctor-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.doctor-card {
+  width: 550rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.doctor-card.active {
+  transform: scale(1);
+}
+
+.doctor-avatar {
+  width: 100%;
+  height: 400rpx;
+}
+
+.doctor-info {
+  padding: 30rpx;
+}
+
+.name-title {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16rpx;
+}
+
+.name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.title {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.department {
+  font-size: 28rpx;
+  color: #2B7FE1;
+  margin-bottom: 16rpx;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16rpx;
+}
+
+.tags text {
+  font-size: 24rpx;
+  color: #2B7FE1;
+  background: rgba(43, 127, 225, 0.1);
+  padding: 4rpx 16rpx;
+  border-radius: 4rpx;
+  margin-right: 12rpx;
+  margin-bottom: 8rpx;
+}
+
+.specialty {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+.doctor-actions {
+  display: flex;
+  padding: 20rpx 30rpx;
+  border-top: 1rpx solid #f5f5f5;
+}
+
+.action-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  margin: 0 10rpx;
+}
+
+.action-btn.consult {
+  background: rgba(43, 127, 225, 0.1);
+  color: #2B7FE1;
+}
+
+.action-btn.appointment {
+  background: #2B7FE1;
+  color: #fff;
+}

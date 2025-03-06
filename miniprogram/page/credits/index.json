@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "积分",
+    "usingComponents": {
+      "custom-component": "/page/mypoints/index"
+    }
+}

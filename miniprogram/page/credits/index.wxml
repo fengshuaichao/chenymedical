@@ -1,0 +1,93 @@
+<view class="page" data-weui-theme="{{theme}}">
+  <view class="credits-container">
+    <!-- 积分卡片 -->
+    <view class="points-card">
+      <view class="points-header">
+        <text class="title">我的积分</text>
+        <view class="points-rules" bindtap="showRules">
+          <text>积分规则</text>
+          <image src="/assets/icons/arrow-right.png"></image>
+        </view>
+      </view>
+      <view class="points-info">
+        <view class="points-number">{{userPoints}}</view>
+        <view class="points-actions">
+          <view class="action-btn" bindtap="navigateToExchange">
+            <image src="/assets/icons/exchange.png"></image>
+            <text>明细</text>
+          </view>
+          <view class="action-btn" bindtap="navigateToTask">
+            <image src="/assets/icons/task.png"></image>
+            <text>赚积分</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+<!-- 修改后的商品分类切换部分 -->
+<view class="tab-header">
+  <view 
+    class="tab-item {{currentTab === 0 ? 'active' : ''}}"
+    bindtap="switchTab"
+    data-tab="0"
+  >
+    精选商品
+  </view>
+  <view 
+    class="tab-item {{currentTab === 1 ? 'active' : ''}}"
+    bindtap="switchTab"
+    data-tab="1"
+  >
+    我可兑换
+  </view>
+</view>
+
+<!-- 商品展示区（保持原有条件渲染） -->
+<view class="recommend-section">
+  <block wx:if="{{currentTab === 0}}">
+    <!-- 精选商品内容 -->
+      <view wx:for="{{featuredGoods}}" wx:key="id" class="recommend-item optimized-card">
+        <image src="{{item.url}}" mode="aspectFill" class="optimized-image"></image>
+        <view class="recommend-info">
+          <view class="recommend-name optimized-name">{{item.name}}</view>
+          <view class="recommend-desc optimized-desc">{{item.desc}}</view>
+          <view class="recommend-price optimized-price">{{item.points}}积分</view>
+        </view>
+      </view>
+  </block>
+
+  
+  <block wx:if="{{currentTab === 1}}">
+    <!-- 可兑换商品内容 -->
+    <view wx:for="{{exchangeableGoods}}" wx:key="id" class="recommend-item optimized-card">
+        <image src="{{item.url}}" mode="aspectFill" class="optimized-image"></image>
+        <view class="recommend-info">
+          <view class="recommend-name optimized-name">{{item.name}}</view>
+          <view class="recommend-desc optimized-desc">{{item.desc}}</view>
+          <view class="recommend-price optimized-price">{{item.points}}积分</view>
+        </view>
+    </view>
+  </block>
+</view>
+<view wx:if="{{isLoading}}" class="loading-text">
+  <text>正在加载商品...</text>
+</view>
+
+    <!-- 积分规则弹窗 -->
+    <view class="rules-popup" wx:if="{{showRulesPopup}}">
+      <view class="rules-content">
+        <view class="rules-header">
+          <text>积分规则</text>
+          <image src="/assets/icons/close.png" bindtap="hideRules"></image>
+        </view>
+        <scroll-view class="rules-list" scroll-y>
+          <view class="rule-item" wx:for="{{pointsRules}}" wx:key="id">
+            <text class="rule-title">{{item.title}}</text>
+            <text class="rule-desc">{{item.description}}</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view> 
+</view> 

@@ -1,0 +1,161 @@
+<view class="page" data-weui-theme="{{theme}}">
+
+  <!-- 搜索框部分 -->
+  <view class="search-container">
+    <view class="search-box">
+      <icon type="search" size="16" color="#999"/>
+      <input 
+        class="search-input" 
+        placeholder="搜索诊疗项目" 
+        placeholder-class="placeholder"
+        value="{{searchKeyword}}"
+        bindinput="onSearchInput"
+        bindconfirm="onSearch"
+      />
+      <view class="search-clear" wx:if="{{searchKeyword}}" bindtap="clearSearch">
+        <icon type="clear" size="14" color="#999"/>
+      </view>
+    </view>
+  </view>
+
+  <!-- 横向导航 -->
+  <view class="quick-menu">
+    <view class="menu-item" bindtap="toMembersprofile" data-url="/page/membersprofile/index">
+      <text>会员权益</text>
+    </view>
+    <view class="menu-item" bindtap="toCredits" data-url="/page/credits/index">
+      <text>积分兑换</text>
+    </view>
+    <view class="menu-item" bindtap="toCompanyDetail" data-url="/page/hospital/index">
+      <text>医院简介</text>
+    </view>
+    <view class="menu-item" bindtap="toRecommend" data-url="/page/recommend/index">
+      <text>推荐有礼</text>
+    </view>
+  </view>
+
+  <!-- 推荐图 -->
+  <view class="recommend">
+    <image class="index-logo" src="./images/home_common.jpg"  bindtap="toRecommend"></image>
+  </view>
+
+  <!-- 轮播图 -->
+  <swiper class="banner" indicator-dots autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image src="{{item.imageUrl}}" mode="aspectFill" bind:tap="toTeam"></image>
+    </swiper-item>
+  </swiper>
+
+  <view class="map-section">
+	    <view class="section-title">具体位置</view>
+		    <view class="map-container">
+		      <!-- <map
+			id="storeMap"
+			class="map"
+			latitude="{{latitude}}"
+			longitude="{{longitude}}"
+			markers="{{markers}}"
+			scale="{{16}}"
+			show-location
+			enable-zoom
+			enable-scroll
+			bind:tap="handleMapTap"
+		      ></map> -->
+			      <view class="store-info">
+					<view class="info-left">
+					  <view class="store-name">武汉尚小镜内镜诊疗中心</view>
+					  <view class="store-address">{{address}}</view>
+					</view>
+					<view class="navigate-btn" bind:tap="openLocation">
+					  <t-icon name="location" size="32rpx" />
+					  <text>导航</text>
+					</view>
+			      </view>
+		    </view>
+	  </view>
+
+
+  <view class="grid-list">
+    <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+      <image src="{{item.icon}}" mode="widthFix"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+
+  <!-- 医生轮播展示 -->
+  <swiper 
+    class="doctors-swiper" 
+    circular
+    autoplay
+    previous-margin="130rpx"
+    next-margin="130rpx"
+    bindchange="handleSwiperChange"
+  >
+    <swiper-item wx:for="{{doctors}}" wx:key="id" class="doctor-item" bind:tap="toDoctor">
+      <view class="doctor-card {{currentIndex === index ? 'active' : ''}}">
+        <image class="doctor-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+        <view class="doctor-info">
+          <view class="name-title">
+            <text class="name">{{item.name}}</text>
+            <text class="title">{{item.title}}</text>
+          </view>
+          <text class="department">{{item.department}}</text>
+          <view class="tags">
+            <text wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">{{tag}}</text>
+          </view>
+          <text class="specialty">{{item.specialty}}</text>
+        </view>
+        <view class="doctor-actions">
+          <button class="action-btn consult" bindtap="consultDoctor" data-id="{{item.id}}">
+            在线咨询
+          </button>
+          <button class="action-btn appointment" bindtap="makeAppointment" data-id="{{item.id}}">
+            立即预约
+          </button>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+
+  <view class="links" bind:tap="toLinkservice">
+    <image class="links-img" src="./images/links.jpg"></image>
+  </view>
+   
+  <!-- <view class="gridBox">
+    <image src="./images/callphone.jpg"></image>
+    <text>联系电话：</text>
+    <text bindtap="phoneOn">{{phone}}</text>
+  </view> -->
+
+  <!-- 拨打电话气泡 -->
+  <view class="call-bubble" bindtap="showCallModal">
+    <view class="bubble-content">
+      <image src="./images/phone-white.jpg"></image>
+      <text>咨询预约</text>
+    </view>
+  </view>
+
+  <!-- 拨打电话弹窗 -->
+  <view class="call-modal {{showCallModal ? 'show' : ''}}" wx:if="{{showCallModal}}">
+    <view class="modal-content">
+      <view class="modal-title">咨询预约</view>
+      <view class="phone-list">
+        <view class="phone-item" wx:for="{{phoneNumbers}}" wx:key="number" bindtap="makePhoneCall" data-phone="{{item.number}}">
+          <view class="phone-info">
+            <text class="phone-label">{{item.label}}</text>
+            <text class="phone-number">{{item.number}}</text>
+          </view>
+          <image src="./images/callphone.jpg"></image>
+        </view>
+      </view>
+      <view class="modal-close" bindtap="hideCallModal">取消</view>
+    </view>
+  </view>
+
+  <view>
+    <button bind:tap="callMysql">查询数据库</button>
+  </view>
+
+</view>

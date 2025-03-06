@@ -1,0 +1,316 @@
+@import "../common/common.wxss";
+
+.product-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 120rpx;
+}
+
+/* 轮播图样式 */
+.service-swiper {
+  width: 100%;
+  height: 750rpx;
+}
+
+.service-swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 商品信息样式 */
+.service-info {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.price-section {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20rpx;
+}
+
+.price {
+  font-size: 48rpx;
+  color: #FF4D4F;
+  font-weight: bold;
+}
+
+.original-price {
+  font-size: 28rpx;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+
+.sold {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: auto;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+
+.desc {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags text {
+  padding: 4rpx 16rpx;
+  background: #F5F5F5;
+  color: #666;
+  font-size: 24rpx;
+  border-radius: 4rpx;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+/* 规格选择样式 */
+.spec-section {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.spec-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.spec-item {
+  width: calc(50% - 20rpx);
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1rpx solid #EEEEEE;
+  border-radius: 8rpx;
+  margin: 10rpx;
+  font-size: 28rpx;
+  position: relative;
+}
+
+.spec-item.selected {
+  border-color: #2B7FE1;
+  color: #2B7FE1;
+  background: rgba(43, 127, 225, 0.05);
+}
+
+.spec-price {
+  color: #FF4D4F;
+  margin-left: 10rpx;
+}
+
+/* 医生团队样式 */
+.doctor-section {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.doctor-scroll {
+  white-space: nowrap;
+}
+
+.doctor-item {
+  display: inline-block;
+  width: 160rpx;
+  margin-right: 30rpx;
+  text-align: center;
+}
+
+.doctor-item image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+}
+
+.doctor-name {
+  font-size: 26rpx;
+  color: #333;
+  display: block;
+}
+
+.doctor-title {
+  font-size: 22rpx;
+  color: #999;
+  display: block;
+}
+
+/* 服务详情样式 */
+.detail-section {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 评价样式 */
+.review-section {
+  background: #fff;
+  padding: 30rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.review-stats {
+  font-size: 26rpx;
+}
+
+.rating {
+  color: #FF4D4F;
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+
+.review-count {
+  color: #999;
+}
+
+.review-item {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.user-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.user-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.review-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.rating-stars {
+  margin-bottom: 10rpx;
+}
+
+.rating-stars image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}
+
+.review-text {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 底部操作栏样式 */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.left-btns {
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40rpx;
+  position: relative;
+}
+
+.icon-btn image {
+  width: 44rpx;
+  height: 44rpx;
+  margin-bottom: 6rpx;
+}
+
+.icon-btn text {
+  font-size: 22rpx;
+  color: #666;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6rpx;
+  right: -10rpx;
+  background: #FF4D4F;
+  color: #fff;
+  font-size: 20rpx;
+  padding: 0 8rpx;
+  border-radius: 20rpx;
+  min-width: 32rpx;
+  text-align: center;
+}
+
+.right-btns {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-cart-btn,
+.buy-btn {
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 65rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+
+.add-cart-btn {
+  background: rgba(43, 127, 225, 0.1);
+  color: #2B7FE1;
+}
+
+.buy-btn {
+  background: #2B7FE1;
+  color: #fff;
+} 

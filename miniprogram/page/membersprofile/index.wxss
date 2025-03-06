@@ -1,0 +1,15 @@
+.membersprofile-container {
+  padding: 0rpx;
+  margin: 0rpx;
+}
+
+.membersprofie-image {
+  width: 100%;
+}
+
+.membersprofie-image image {
+  width: 100%;
+}
+
+
+

@@ -1,0 +1,13 @@
+
+.doctor-container {
+  background-color: #fff;
+}
+
+.doctor-banner-image {
+  height: 450rpx;
+}
+
+.doctor-banner-image image {
+  height: 100%;
+  width: 100%;
+}

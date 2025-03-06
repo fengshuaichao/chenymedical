@@ -1,0 +1,230 @@
+{
+  "pages": [
+    "page/home/index",
+    "page/mallshop/index",
+    "page/credits/index",
+    "page/cart/index",
+    "page/usercenter/index",
+    "page/productdetail/index",
+    "page/company/index",
+    "page/recommend/index",
+    "page/membersprofile/index",
+    "page/linkservice/index",
+    "page/doctor/index",
+    "page/team/index",
+    "page/userinfo/index",
+    "page/customerreg/index",
+    "page/exchangegoods/index",
+    "page/mypoints/index",
+    "page/login/index"
+  ],
+  "subpackages": [
+    {
+      "root": "packageHome",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageMallshop",
+      "pages": [
+        "pages/view/view/view",
+        "pages/view/scroll-view/scroll-view"
+      ]
+    },
+    {
+      "root": "packageCredits",
+      "pages": [
+        "pages/api/login/login",
+        "pages/api/get-user-info/get-user-info"
+      ]
+    },
+    {
+      "root": "packageCart",
+      "pages": [
+        "pages/productdetail/index",
+        "pages/user/user-authentication/user-authentication"
+      ]
+    },
+    {
+      "root": "packageUsercenter",
+      "pages": [
+        "pages/form/cell/cell"
+      ]
+    },
+    {
+      "root": "packageProductdetail",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageCompany",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+       
+      ]
+    },
+    {
+      "root": "packageRecommend",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageMembersprofile",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageLinkservice",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageDoctor",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageTeam",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageUserinfo",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageCustomerreg",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    },
+    {
+      "root": "packageExchangegoods",
+      "pages": [
+        "pages/form/cell/cell",
+        "pages/form/slideview/slideview"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "page/home/index": {
+      "network": "all",
+      "packages": [
+        "packageHome"
+      ]
+    },
+    "page/mallshop/index": {
+      "network": "all",
+      "packages": [
+        "packageMallshop"
+      ]
+    },
+    "page/credits/index": {
+      "network": "all",
+      "packages": [
+        "packageCredits"
+      ]
+    },
+    "page/cart/index": {
+      "network": "all",
+      "packages": [
+        "packageCart"
+      ]
+    },
+    "page/usercenter/index": {
+      "network": "all",
+      "packages": [
+        "packageUsercenter"
+      ]
+    }
+  },
+  "window": {
+    "navigationBarTextStyle": "@navigationBarTextStyle",
+    "navigationBarTitleText": "演示",
+    "navigationBarBackgroundColor": "@navigationBarBackgroundColor",
+    "backgroundColor": "@backgroundColor"
+  },
+  "tabBar": {
+    "color": "@tabBarColor",
+    "selectedColor": "@tabBarSelectedColor",
+    "borderStyle": "@tabBarBorderStyle",
+    "backgroundColor": "@tabBarBackgroundColor",
+    "list": [
+      {
+        "pagePath": "page/home/index",
+        "iconPath": "@iconPathIndex",
+        "selectedIconPath": "@selectedIconPathIndex",
+        "text": "主页"
+      },
+      {
+        "pagePath": "page/mallshop/index",
+        "iconPath": "@iconPathMallshop",
+        "selectedIconPath": "@selectedIconPathMallshop",
+        "text": "商城"
+      },
+      {
+        "pagePath": "page/credits/index",
+        "iconPath": "@iconPathCredits",
+        "selectedIconPath": "@selectedIconPathCredits",
+        "text": "积分"
+      },
+      {
+        "pagePath": "page/cart/index",
+        "iconPath": "@iconPathCart",
+        "selectedIconPath": "@selectedIconPathCart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "page/usercenter/index",
+        "iconPath": "@iconPathUsercenter",
+        "selectedIconPath": "@selectedIconPathUsercenter",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "workers": "workers",
+  "debug": false,
+  "style": "v2",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "cloud": true,
+  "sitemapLocation": "sitemap.json",
+  "themeLocation": "demo.theme.json",
+  "darkmode": true,
+  "resizable": true,
+  "useExtendedLib": {
+    "weui": true
+  },
+  "frameset": true,
+  "requiredBackgroundModes": ["audio", "location"],
+  "embeddedAppIdList": ["wxfdcee92a299bcaf1"],
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,91 @@
+/* pages/integral/integral.wxss */
+.container {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding: 32rpx;
+}
+
+/* 标题样式 */
+.header {
+  text-align: center;
+  padding: 48rpx 0;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 用户信息栏 */
+.user-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 32rpx;
+  border-radius: 16rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+}
+
+.account-text {
+  font-size: 32rpx;
+  color: #666;
+}
+
+.switch-text {
+  color: #007AFF;
+  font-size: 28rpx;
+  padding: 8rpx 16rpx;
+  border: 1rpx solid #007AFF;
+  border-radius: 8rpx;
+}
+
+/* 分类选项卡 */
+.tabs {
+  display: flex;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 32rpx;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 28rpx 0;
+  font-size: 32rpx;
+  color: #666;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.tab-item.active {
+  color: #007AFF;
+  font-weight: 500;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 4rpx;
+  background: #007AFF;
+  border-radius: 2rpx;
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.empty-text {
+  color: #999;
+  font-size: 32rpx;
+}

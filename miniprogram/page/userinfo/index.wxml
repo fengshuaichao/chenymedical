@@ -1,0 +1,39 @@
+<view class="userinfo-container">
+  <!-- 用户信息区域 -->
+  <view class="user-info">
+    <view class="user-id">
+      <text>用户{{userId}}</text>
+      <text class="phone">{{maskedPhone}}</text>
+    </view>
+    <view class="actions">
+      <text class="action-btn" bindtap="handleLogout">退出登录</text>
+      <text class="action-btn" bindtap="handleEditAvatar">修改头像昵称</text>
+    </view>
+  </view>
+
+  <!-- 空状态提示 -->
+  <view class="empty-state" wx:if="{{showEmpty}}">
+    <image class="empty-icon" src="/assets/images/empty-file.png" mode="aspectFit"></image>
+    <text class="empty-text">当前登录手机号没匹配到就诊人档案，\n请创建就诊人或者切换其他手机号</text>
+  </view>
+
+  <!-- 底部按钮 -->
+  <!-- <view class="bottom-buttons">
+    <button class="btn bind-btn" bindtap="handleBind">绑定其他已有就诊人</button>
+    <button class="btn create-btn" bindtap="handleCreate">创建新就诊人</button>
+    <view class="btn-desc">
+      <text>用手机号码登记过患者档案</text>
+      <text>从未到院，自助新建档案</text>
+    </view>
+  </view> -->
+  <view class="bottom-buttons-other">
+    <view class="bindOther">
+      <button class="btn bind-btn" bindtap="handleBind">绑定其他已有就诊人</button>
+      <text class="btn-desc">用手机号码登记过患者档案</text>
+    </view>
+    <view class="createNew">
+      <button class="btn create-btn" bindtap="handleCreate">创建新就诊人</button>
+      <text class="btn-desc">从未到院，自助新建档案</text>
+    </view>
+  </view>
+</view> 

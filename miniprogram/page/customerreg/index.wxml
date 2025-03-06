@@ -1,0 +1,110 @@
+<view class="customerreg-container">
+  <!-- 顶部图标 -->
+  <view class="header">
+    <image class="icon" src="./images/profile.png" mode="aspectFit"></image>
+  </view>
+
+  <!-- 表单区域 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label required">姓名</text>
+      <input type="text" placeholder="请填写真实姓名" model:value="{{name}}" />
+    </view>
+
+    <view class="form-item arrow">
+      <text class="label required">登记门诊</text>
+      <view class="value" bindtap="showClinicPicker">{{clinic || '上海康沈口腔'}}</view>
+    </view>
+
+    <view class="form-item arrow">
+      <text class="label required">手机号类型</text>
+      <view class="value" bindtap="selectPhoneType">{{phoneType || '本人'}}</view>
+    </view>
+
+    <view class="form-item">
+      <text class="label required">手机号</text>
+      <input type="number" placeholder="请输入手机号" model:value="{{phone}}" maxlength="11" />
+    </view>
+
+    <view class="form-item arrow">
+      <text class="label">生日</text>
+      <!-- <picker mode="date" value="{{birthday}}" bindchange="onBirthdayChange">
+        <view class="value">{{birthday || '1990-01-01'}}</view>
+      </picker> -->
+      <view class="value" bindtap="showDatePicker">{{birthday || '2000-01-01'}}</view>
+    </view>
+
+    <view class="form-item arrow">
+      <text class="label">性别</text>
+      <!-- <picker range="{{genderList}}" value="{{genderIndex}}" bindchange="onGenderChange">
+        <view class="value">{{genderList[genderIndex]}}</view>
+      </picker> -->
+      <view class="value" bindtap="showGenderPicker">{{gender || '男'}}</view>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn">
+    <button type="primary" bindtap="submitForm">提交</button>
+  </view>
+
+  <!-- 底部弹出的日期选择器 -->
+  <view class="popup-mask" wx:if="{{showDatePicker}}" bindtap="closeDatePicker"></view>
+  <view class="popup-content {{showDatePicker ? 'popup-show' : ''}}">
+    <view class="popup-header">
+      <text class="cancel" bindtap="closeDatePicker">取消</text>
+      <text class="title">选择日期</text>
+      <text class="confirm" bindtap="confirmDate">确定</text>
+    </view>
+    <picker-view value="{{dateValue}}" bindchange="onDateChange" class="picker-view">
+      <picker-view-column>
+        <view wx:for="{{years}}" wx:key="*this" class="picker-item">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" wx:key="*this" class="picker-item">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" wx:key="*this" class="picker-item">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
+  <!-- 底部弹出的门诊选择器 -->
+  <view class="popup-mask" wx:if="{{showClinicPicker}}" bindtap="closeClinicPicker"></view>
+  <view class="popup-content {{showClinicPicker ? 'popup-show' : ''}}">
+    <view class="popup-header">
+      <text class="cancel" bindtap="closeClinicPicker">取消</text>
+      <text class="title">选择门诊</text>
+      <text class="confirm" bindtap="confirmClinic">确定</text>
+    </view>
+    <scroll-view scroll-y class="clinic-list">
+      <view class="clinic-item {{selectedClinic === item ? 'selected' : ''}}" 
+            wx:for="{{clinicList}}" 
+            wx:key="*this"
+            bindtap="selectClinicItem"
+            data-clinic="{{item}}">
+        {{item}}
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <!-- 底部弹出的性别选择器 -->
+  <view class="popup-mask" wx:if="{{showGenderPicker}}" bindtap="closeGenderPicker"></view>
+  <view class="popup-content {{showGenderPicker ? 'popup-show' : ''}}">
+    <view class="popup-header">
+      <text class="cancel" bindtap="closeGenderPicker">取消</text>
+      <text class="title">选择性别</text>
+      <text class="confirm" bindtap="confirmGender">确定</text>
+    </view>
+    <scroll-view scroll-y class="gender-list">
+      <view class="gender-item {{selectedGender === item ? 'selected' : ''}}" 
+            wx:for="{{genderList}}" 
+            wx:key="*this"
+            bindtap="selectGenderItem"
+            data-gender="{{item}}">
+        {{item}}
+      </view>
+    </scroll-view>
+  </view>
+</view> 

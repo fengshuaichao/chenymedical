@@ -1,0 +1,11 @@
+<!--page/company/index.wxml-->
+<!-- <view class="page" data-weui-theme="{{theme}}"></view>-->
+<view class="company-container">
+  <view class="company-name">
+    <text>武汉尚小镜内镜诊断医院</text>
+  </view>
+  
+  <view class="company-image">
+    <image src="images/company.png"></image>
+  </view>
+</view>

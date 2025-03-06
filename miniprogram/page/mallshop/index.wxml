@@ -1,0 +1,59 @@
+<!-- pages/category/category.wxml -->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <input class="search-input" placeholder="输入商品名称" />
+  </view>
+
+  <!-- 商家推荐 -->
+  <view class="merchant-section">
+    <text class="section-title">商家推荐</text>
+    <view class="merchant-card">
+      <view class="merchant-header">
+        <text class="merchant-name">上海康沈阳院·口腔</text>
+      </view>
+      <view class="family-card">
+        <text class="card-title">家庭卡</text>
+        <text class="hospital-name">上海康沈阳医院</text>
+        <text class="card-type">家庭卡</text>
+        <view class="price-container">
+          <text class="price">¥96</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商品精选 -->
+  <view class="product-section">
+    <text class="section-title">商品精选</text>
+    
+    <!-- 应该改为获取数据库 -->
+    <view class="category-group">
+      <text class="category-title">种植产品</text>
+      <view class="product-item">
+        <view class="product-info">
+          <text class="product-name">奥齿泰牙齿种植</text>
+          <text class="product-desc">【种植集采价】韩国奥齿泰牙齿种植套餐（全包...）</text>
+        </view>
+        <text class="product-price">¥3980</text>
+      </view>
+    </view>
+
+    <!-- 应该改为获取数据库 -->
+    <view class="category-group">
+      <text class="category-title">儿童齿科</text>
+      <view class="product-item">
+        <view class="product-info">
+          <text class="product-name">儿童树脂补牙</text>
+          <text class="product-desc">【儿童树脂补牙】儿童树脂补牙/儿童补牙（限...）</text>
+        </view>
+        <view class="price-group">
+          <text class="original-price">¥300</text>
+          <text class="discount-price">¥124</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

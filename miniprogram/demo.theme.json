@@ -1,0 +1,48 @@
+{
+  "light": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F7F7F7",
+    "backgroundColor": "#F7F7F7",
+
+    "tabBarColor": "#7A7E83",
+    "tabBarSelectedColor": "#10a2b6",
+    "tabBarBorderStyle": "black",
+    "tabBarBackgroundColor": "#F7F7F7",
+
+    "iconPathIndex": "image/tabicon/index.png",
+    "selectedIconPathIndex": "image/tabicon/index_selected.png",
+    "iconPathMallshop": "image/tabicon/mall.png",
+    "selectedIconPathMallshop": "image/tabicon/mall_selected.png",
+    "iconPathCredits": "image/tabicon/credits.png",
+    "selectedIconPathCredits": "image/tabicon/credits_selected.png",
+    "iconPathCart": "image/tabicon/cart.png",
+    "selectedIconPathCart": "image/tabicon/cart_selected.png",
+    "iconPathUsercenter": "image/tabicon/usercenter.png",
+    "selectedIconPathUsercenter": "image/tabicon/usercenter_selected.png",
+
+    "backgroundTextStyle": "dark"
+  },
+  "dark": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#1F1F1F",
+    "backgroundColor": "#1F1F1F",
+
+    "tabBarColor": "#FFFFFFCC",
+    "tabBarSelectedColor": "#10a2b6",
+    "tabBarBorderStyle": "white",
+    "tabBarBackgroundColor": "#1F1F1F",
+
+    "iconPathIndex": "image/tabicon/index.png",
+    "selectedIconPathIndex": "image/tabicon/index_selected.png",
+    "iconPathMallshop": "image/tabicon/mall.png",
+    "selectedIconPathMallshop": "image/tabicon/mall_selected.png",
+    "iconPathCredits": "image/tabicon/credits.png",
+    "selectedIconPathCredits": "image/tabicon/credits_selected.png",
+    "iconPathCart": "image/tabicon/cart.png",
+    "selectedIconPathCart": "image/tabicon/cart_selected.png",
+    "iconPathUsercenter": "image/tabicon/usercenter.png",
+    "selectedIconPathUsercenter": "image/tabicon/usercenter_selected.png",
+
+    "backgroundTextStyle": "light"
+  }
+}

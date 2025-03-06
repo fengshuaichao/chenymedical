@@ -1,0 +1,129 @@
+/* pages/category/category.wxss */
+.container {
+  padding: 32rpx;
+  background-color: #f5f5f5;
+  padding-bottom: 120rpx;
+}
+
+/* 搜索栏 */
+.search-bar {
+  margin-bottom: 40rpx;
+}
+.search-input {
+  background: #fff;
+  padding: 24rpx 32rpx;
+  border-radius: 48rpx;
+  font-size: 28rpx;
+}
+
+/* 通用标题样式 */
+.section-title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 32rpx;
+  color: #333;
+}
+
+/* 商家推荐 */
+.merchant-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
+}
+.merchant-name {
+  font-size: 32rpx;
+  color: #007AFF;
+  margin-bottom: 24rpx;
+}
+.family-card {
+  border-top: 1rpx solid #eee;
+  padding-top: 24rpx;
+}
+.card-title {
+  font-size: 28rpx;
+  color: #666;
+}
+.hospital-name {
+  font-size: 24rpx;
+  color: #999;
+  margin: 16rpx 0;
+}
+.price {
+  font-size: 40rpx;
+  color: #FF5500;
+  font-weight: bold;
+}
+
+/* 商品精选 */
+.category-group {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 32rpx;
+}
+.category-title {
+  font-size: 32rpx;
+  color: #333;
+  border-left: 8rpx solid #007AFF;
+  padding-left: 16rpx;
+  margin-bottom: 24rpx;
+}
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+.product-info {
+  flex: 1;
+  margin-right: 32rpx;
+}
+.product-name {
+  font-size: 28rpx;
+  color: #333;
+}
+.product-desc {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+}
+.product-price {
+  font-size: 32rpx;
+  color: #FF5500;
+  font-weight: 500;
+}
+.price-group {
+  text-align: right;
+}
+.original-price {
+  font-size: 24rpx;
+  color: #999;
+  text-decoration: line-through;
+}
+.discount-price {
+  font-size: 32rpx;
+  color: #FF5500;
+  display: block;
+  margin-top: 8rpx;
+}
+
+/* 底部导航 */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1rpx solid #eee;
+}
+.nav-item {
+  font-size: 24rpx;
+  color: #666;
+}
